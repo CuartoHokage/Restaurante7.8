@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	div(class="jumbotron")
+		div(class="container")
+			h1= title
+			p='Restaurant 7.8, el restaurant gastronómico número uno en Ecuador, principalmente destacados en mariscos.'
+			if isAuthenticated
+				p='Buen día, ' + user.nombres
+	div(id="carousel-1" class="carousel slide" data-ride="carousel")
+			ol(class="carousel-indicators")
+				li(data-target="#carousel-1" data-slide-to="0" class="active")
+				li(data-target="#carousel-1" data-slide-to="1")
+				li(data-target="#carousel-1" data-slide-to="2")
+			div(class="carousel-inner" role="listbox")
+				div(class="item active")
+					img(src="/images/ceviche.jpg" class="first-slide img-responsive" alt="First slide")
+					div(class="carousel-caption hidden-xs hidden-sm")
+						h3='El mejor ceviche'
+				div(class="item")
+					img(src="/images/encebollado.jpg" class="first-slide img-responsive" alt="")
+					div(class="carousel-caption hidden-xs hidden-sm")
+						h3='El encebollado se come con yuca y cebolla...'
+				div(class="item")
+					img(src="/images/apanado.jpg" class="img-responsive" alt="")
+					div(class="carousel-caption hidden-xs hidden-sm")
+						h3='El apanado mas sabroso :v'
+			a(href="#carousel-1" class="left carousel-control" role="button" data-slide="prev")
+				span(class="glyphicon glyphicon-chevron-left" arial-hidden=true)
+				span(class="sr-only")='Anterior'
+			a(href="#carousel-1" class="right carousel-control" role="button" data-slide="next")
+				span(class="glyphicon glyphicon-chevron-right" arial-hidden=true)
+				span(class="sr-only")='Siguiente'
+	
+

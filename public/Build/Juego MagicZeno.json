@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Juego MagicZeno.data.unityweb",
+"asmCodeUrl": "Juego MagicZeno.asm.code.unityweb",
+"asmMemoryUrl": "Juego MagicZeno.asm.memory.unityweb",
+"asmFrameworkUrl": "Juego MagicZeno.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#5A5A5A"
+}

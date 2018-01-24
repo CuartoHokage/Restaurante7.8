@@ -1,0 +1,36 @@
+div(class="navbar-wrapper" id='barra')
+  div(class="container")
+    nav(class="navbar navbar-inverse navbar-fixed-top")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+            span(class="sr-only")= 'Toggle navigation'
+            span(class="icon-bar")
+            span(class="icon-bar")
+            span(class="icon-bar")
+          a.navbar-brand(href='/')
+            span.glyphicon.glyphicon-cutlery(aria-hidden='true')
+            | Restaurant 7.8    
+        div(class="collapse navbar-collapse" id="bs-example-navbar-collapse-1")     
+          ul(class="nav navbar-nav navbar-right")
+            ul(class="nav navbar-nav")
+            li
+              a(class="" href='/juego')='Jugar'
+            li
+              a(class="" href='http://localhost:3000/productos')='Consultar productos'
+            li
+              a(class="" href='http://localhost:3000/nuevo')='Crear nuevo producto'
+            if !isAuthenticated
+              li
+                a(href="http://localhost:3000/usuarios/registro")= 'Registrarse'
+              li
+                a(href="http://localhost:3000/usuarios/inicioSesion")= 'Iniciar Sesion'
+            if isAuthenticated
+              li(class="dropdown")
+                a(href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")= user.nombres
+                  span(class="caret")
+                ul(class="dropdown-menu")
+                  li
+                    a(href="http://localhost:3000/usuarios/panel")= 'Perfil'
+                  li
+                    a(href="http://localhost:3000/usuarios/cerrarSesion")= 'Cerrar Sesion'

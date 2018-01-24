@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  br
+  br
+  div(class="container")
+    .webgl-content
+        #gameContainer(style='width: 960px; height: 600px')
+        .footer
+          .webgl-logo
+          .fullscreen(onclick='gameInstance.SetFullscreen(1)')
+          .title MagicZeno

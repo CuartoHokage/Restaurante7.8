@@ -1,0 +1,59 @@
+extends ../layout
+block content
+  
+  div(class="container")
+    h1(class='colorAzul')='Platos a la carta'
+    hr(class="featurette-divider")
+    div(class='container')
+      form(class='form-inline' action='/productos' method='post' id='consultaDatos')
+        div(class='form-group')
+          label(for='Buscar' class='col-sm-4')='Buscar producto'
+          input(class='form-control' id='Buscar' type= 'text' name='Buscar' placeholder='Buscar...')
+          a(class="btn btn-default" href='#' id='btn-consultar')
+            i.glyphicon.glyphicon-search(aria-hidden='true')
+    div(class="table-responsive container")
+      table(class="table table-bordered table-striped table-condensed" id='tabla_productos')
+        thead
+          tr(class='color')
+            th= 'Codigo'
+            th= 'Descripción'
+            th= 'Precio'
+            th= 'Fecha'
+            th= 'Acciones'
+        tbody
+          each producto in productos
+            tr
+              td(id='idProductos')= producto.idProductos
+              td= producto.Descripcion
+              td= producto.Precio
+              td= producto.FechaCreacion
+              td
+                a(class="btn btn-default" href='#' id='btn-eliminar' data-position='top center')
+                  i.glyphicon.glyphicon-trash(aria-hidden='true')
+                //- a(class="btn btn-default" href='/modificar/'+producto.idProductos  data-position='top center' data-toggle='modal')
+                //-   i.glyphicon.glyphicon-pencil(aria-hidden='true')
+                a(class="btn btn-default" href='#modificar' data-position='top center' data-toggle='modal')
+                  i.glyphicon.glyphicon-pencil(aria-hidden='true')
+                //- Modal de la ventana modificar
+                div(class="modal fade" id='modificar')
+                  div(class="modal-dialog")
+                    div(class="modal-content")
+                      //- Encabezado de la ventana
+                      div(class="modal-header")
+                        button(tyle='button' class="close" data-dismiss='modal' aria-hidden='true')&times;
+                        h4#exampleModalLabel.modal-title Modificar Productos
+                      //- Contenido de la ventana
+                      div(class="modal-body")
+                        div(class='panel-body')
+                          div(class='form-nuevoproducto')
+                            form(class="" action='/editar' method='post')
+                              div(class='form-group')
+                                label(for='Nombre')='Nombre del producto'
+                                input(class='form-control' type= 'text' name='Nombre' placeholder='Nombre' value=productos[0].Descripcion)
+                              div(class='form-group')
+                                label(for='Precio')='Precio del producto'
+                                input(class='form-control' type= 'text' name='Precio' placeholder='Precio' value=productos[0].Precio)
+                                input(class='form-control'  type= 'hidden' name='idProductos' placeholder='Precio' value=productos[0].idProductos)        
+                              button(type='submit' class='btn btn-default' id='btn-modificar')='Modificar Producto'
+  script(src='javascripts/productos.js')
+  

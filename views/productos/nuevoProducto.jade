@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  div(class="container")
+    h1(class='colorAzul')='Crear nuevos platos a la carta'
+    hr(class="featurette-divider")
+    div(class= 'col-md-6 col-md-offset-3')
+      div(class='panel panel-default')
+          div(class='panel-heading')='Registrar productos'
+          div(class='panel-body')
+            div(class='form-nuevoproducto')
+              form(class="" action='/crearproducto' method='post')
+                div(class='form-group')
+                  label(for='Nombre')='Nombre del producto'
+                  input(class='form-control' type= 'text' name='Nombre' placeholder='Nombre')
+                div(class='form-group')
+                  label(for='Precio')='Precio del producto'
+                  input(class='form-control' type= 'text' name='Precio' placeholder='Precio')
+                button(type='submit' class='btn btn-default' id='enviar')='Registrar Producto'
+                

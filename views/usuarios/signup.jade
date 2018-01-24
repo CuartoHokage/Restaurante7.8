@@ -1,0 +1,33 @@
+extends ../layout
+block content
+  div(class="container")
+    h1(class='colorAzul')='Registrarme en el sistema como empleado'
+    hr(class="featurette-divider")
+    div(class= 'col-md-6 col-md-offset-3')
+      div(class='panel panel-default')
+          div(class='panel-heading')='Registrarme como:'
+          div(class='panel-body')
+            div(class='form-nuevoproducto')
+              form(class="" action='/usuarios/registro' method='post')
+                div(class='form-group')
+                  label(for='Nombre')='Nombre completo'
+                  input(class='form-control' type= 'text' name='Nombre' placeholder='Nombre')
+                div(class='form-group')
+                  label(for='email')='Correo Electrónico'
+                  input(class='form-control' type= 'email' name='email' placeholder='ejemplo@loquesea.com')
+                div(class='form-group')
+                  label(for='password')='Contraseña'
+                  input(class='form-control' type= 'password' name='password' placeholder='Contraseña')
+                div(class='form-group')
+                  label(for='telefono')='Número de telefono'
+                  input(class='form-control' type= 'tel' name='telefono' placeholder='099999999')
+                div(class='form-group')
+                  label(for='direccion')='Dirección domiciliaria'
+                  input(class='form-control' type= 'text' name='direccion' placeholder='Direccion')
+                div(class='form-group')
+                  label(for='cargo')='Cargo o rol que desempeña en la empresa'
+                  input(class='form-control' type= 'text' name='cargo' placeholder='Cargo')
+                div(class='form-group')
+                  label(for='cedula')='Cédula de ciudadania'
+                  input(class='form-control' type= 'number' name='cedula' placeholder='100000000-0')
+                button(type='submit' class='btn btn-default' id='enviar')='Registrar cliente'

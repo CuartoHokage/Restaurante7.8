@@ -1,0 +1,73 @@
+doctype html
+html
+  head
+    title= 'Restaurant 7.8'
+    link(rel='stylesheet', href='/stylesheets/estiloslocos.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="/stylesheets/carousel.css")
+    link(rel='stylesheet', href='/stylesheets/Footer-with-button-logo.css')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content=['width=device-width', 'initial-scale=1']) 
+    link(rel='shortcut icon', href='TemplateData/favicon.ico')
+    link(rel='stylesheet', href='TemplateData/style.css')
+    script(src='TemplateData/UnityProgress.js')
+    script(src='Build/UnityLoader.js')
+    script.
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Juego MagicZeno.json", {onProgress: UnityProgress});
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  body
+    include templades/nav
+    br
+    br
+    block content
+  hr(class="featurette-divider")
+  footer#myFooter
+      .container
+        .row
+          .col-sm-3
+            h3.logo
+              a(href='http://localhost:3000')  RESTAURANT 7.8 
+          .col-sm-2
+            h5 Comencemos:
+            ul
+              li
+                a(href='#') Inicio
+              li
+                a(href='#') Iniciar Sesión
+              
+          .col-sm-2
+            h5 Desarrollado por:
+            ul
+              li
+                a(href='https://konothec.herokuapp.com/' target="_blank") Konothec S.A
+              li
+                a(href='#') Contactos
+              li
+                a(href='#') Reviews
+          .col-sm-2
+            h5 Suporte
+            ul
+              li
+                a(href='#') FAQ
+              li
+                a(href='#') Help desk
+              li
+                a(href='#') Forums
+          .col-sm-3
+            .social-networks
+              a.twitter(href='#')
+                i.icon-youtube
+              a.facebook(href='#')
+                i.icon-facebook
+              a.google(href='mailto:jaime19950505@hotmai.com')
+                i.icon-email
+            button.btn.btn-default(type='button') Contactanos
+            a.btn.btn-default(href='#barra')
+              i.icon-feather Subir
+      .footer-copyright
+        p © 2016 Restaurant 7.8
+
+
