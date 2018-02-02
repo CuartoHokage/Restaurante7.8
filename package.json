@@ -13,5 +13,10 @@
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "Jaime Paz",
+  "license": "ISC",
+  "description": ""
 }
