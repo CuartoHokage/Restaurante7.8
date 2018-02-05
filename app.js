@@ -6,14 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
 var expressSesion= require('express-session');
-
+var formidable= require("express-formidable");
 var routes = require('./routes/routes');
 var passport= require('passport');
 require('./passport/passport')(passport);
 
 
 var app = express();
-
+app.use(formidable.parse({keepExtensions: true}));
 app.use(cookieParser());
 
 app.use(expressSesion({

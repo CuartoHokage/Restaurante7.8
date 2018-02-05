@@ -9,12 +9,16 @@ block content
           div(class='panel-heading')='Registrar productos'
           div(class='panel-body')
             div(class='form-nuevoproducto')
-              form(class="" action='/crearproducto' method='post')
+              form(class="" action='/crearproducto' method='post' enctype="multipart/form-data")
                 div(class='form-group')
                   label(for='Nombre')='Nombre del producto'
                   input(class='form-control' type= 'text' name='Nombre' placeholder='Nombre')
                 div(class='form-group')
                   label(for='Precio')='Precio del producto'
                   input(class='form-control' type= 'text' name='Precio' placeholder='Precio')
+                div
+                  label(for="archivo") Imagen
+                  input(type="file", name="archivo", id="archivo" class="form-control")
+                br
                 button(type='submit' class='btn btn-default' id='enviar')='Registrar Producto'
                 
