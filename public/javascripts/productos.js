@@ -24,7 +24,7 @@ $(function(){
 		var id= elemento.parent().parent().find('#idProducto').text();
 		$.ajax({
 			url: '/editar',
-			method: 'post'
+			method: 'post',
 			data: {id: id}, 
 				success: function(res){
 					if(res.res){
