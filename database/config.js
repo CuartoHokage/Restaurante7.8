@@ -2,7 +2,7 @@ var config=
 {
 	host: 'localhost',
 	user: 'root',
-	// password: '',
+	// password: '',//locald
 	password: '12qwaszx',//para produccion
 	database: 'restaurant78',
 	dateStrings: true
